@@ -1,0 +1,268 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Managers' AI Toolkit — Prompt Vault</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; background:#0b0c10; color:#f5f5f5;}
+header{padding:24px 16px; background:#111218; position:sticky; top:0; z-index:10; border-bottom:1px solid #222;}
+input{width:100%; padding:12px 14px; border-radius:10px; border:1px solid #2a2a2a; background:#0f1015; color:#f5f5f5;}
+section{padding:22px 0; border-bottom:1px solid #222;}
+h2{margin:0 0 12px; font-size:20px;}
+.card{background:#111218; border:1px solid #222; border-radius:14px; padding:12px; margin:10px 0;}
+.meta{display:flex; gap:10px; align-items:center; margin-bottom:8px;}
+.title{font-weight:700;}
+.pill{font-size:12px; padding:3px 8px; border:1px solid #2a2a2a; border-radius:999px; color:#ddd;}
+textarea{width:100%; min-height:110px; border-radius:10px; border:1px solid #2a2a2a; background:#0f1015; color:#f5f5f5; padding:10px; resize:vertical;}
+.btn{margin-top:8px; padding:8px 12px; border-radius:10px; border:1px solid #2a2a2a; background:#151827; color:#f5f5f5; cursor:pointer;}
+.empty{color:#bbb;}
+small{color:#aaa;}
+
+/* --- Layout: sticky TOC sidebar --- */
+.container{max-width:1200px; margin:0 auto; padding:0 16px;}
+.layout{display:flex; gap:26px; align-items:flex-start; padding-top:18px;}
+.main{flex:1; min-width:0;}
+.toc{flex:0 0 320px; position:sticky; top:120px; max-height:calc(100vh - 140px); overflow:auto;}
+.toc-inner{background:#111218; border:1px solid #222; border-radius:14px; padding:14px;}
+.toc h2{margin:0 0 10px; font-size:16px; color:#ddd;}
+.toc ul{list-style:none; padding:0; margin:0;}
+.toc li{margin:0 0 6px;}
+.toc a{color:#9ad; text-decoration:none; display:block; padding:8px 10px; border-radius:12px; line-height:1.25;}
+.toc a:hover{background:#151827;}
+
+@media (max-width: 980px){
+  .layout{flex-direction:column;}
+  .toc{position:relative; top:auto; max-height:none; width:100%;}
+}
+</style></head>
+<body>
+<script>if(localStorage.getItem('vault_access_granted')!=='1'){location.href='index.html';}</script>
+<header><div class='container'>
+<h1 style='margin:0 0 10px'>Managers' AI Toolkit — Prompt Vault</h1>
+<input id='search' placeholder='Search prompts (title + text)'>
+<small>Tip: Use search, then copy any prompt. Your access stays unlocked on this device.</small>
+</div></header>
+<div class='container layout'>
+  <main class='main' id='content'>
+    <section id='chapter-1-how-managers-should-use-ai-safely-effectively'><h2>Chapter 1 — How Managers Should Use AI (Safely + Effectively)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 1.1 — Manager Loop: clarify then draft</span><span class='pill'>Prompt Card 1.1</span></div><textarea readonly id='chapter-1-how-managers-should-use-ai-safely-effectively-1'>Use when: You have messy context and need a usable first draft fast.
+Prompt:
+You are my executive assistant. First ask up to 5 clarifying questions that would change the output. Then, once I answer, draft a [email/one-pager/agenda] using this structure: (1) Decision/Ask in first 2 lines, (2) Context (max 3 bullets), (3) Options or recommendation, (4) Risks/assumptions, (5) Next steps with owners and dates. Keep it under [X] words.</textarea><button class='btn' onclick="copyText('chapter-1-how-managers-should-use-ai-safely-effectively-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 1.2 — Executive rewrite: shorter and clearer</span><span class='pill'>Prompt Card 1.2</span></div><textarea readonly id='chapter-1-how-managers-should-use-ai-safely-effectively-2'>Use when: You already have a draft but it is too long or too soft.
+Prompt:
+Rewrite the text below for an executive audience. Constraints: 20-30% shorter, decision/ask in first 2 lines, remove fluff, use concrete owners/dates, keep tone calm and confident. If anything is uncertain, mark it as TBD and list what to verify. Text: [paste].</textarea><button class='btn' onclick="copyText('chapter-1-how-managers-should-use-ai-safely-effectively-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 1.3 — Notes to actions (owner/date)</span><span class='pill'>Prompt Card 1.3</span></div><textarea readonly id='chapter-1-how-managers-should-use-ai-safely-effectively-3'>Use when: You have meeting notes or a call transcript and need follow-ups.
+Prompt:
+Convert these notes into: (1) Decisions (with date), (2) Action items (owner, due date, next step), (3) Open questions (owner), (4) Risks/blockers. If something is missing, add a question. Notes: [paste].</textarea><button class='btn' onclick="copyText('chapter-1-how-managers-should-use-ai-safely-effectively-3')">Copy</button></div></section><section id='chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output'><h2>Chapter 2 — The Executive Brief (The 60-Second Input That Fixes Most Output)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 2.1 — Executive Brief builder (60 seconds)</span><span class='pill'>Prompt Card 2.1</span></div><textarea readonly id='chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-1'>Use when: You want better AI output by improving your input.
+Prompt:
+Create an Executive Brief from my notes. Output exactly these fields: Audience, Decision/Ask, Success criteria (max 5 bullets), Context (max 3 bullets), Constraints (tone/length/must include/avoid), Inputs I have, Unknowns to clarify (max 5 questions). Notes: [paste].</textarea><button class='btn' onclick="copyText('chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 2.2 — Brief to outline (structure-first)</span><span class='pill'>Prompt Card 2.2</span></div><textarea readonly id='chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-2'>Use when: You have a brief and want a clean structure before writing.
+Prompt:
+Using the brief below, produce a structure-first outline for a [email/one-pager/memo]. Include section headers and 1-2 bullets per section. Do not write full prose yet. Brief: [paste].</textarea><button class='btn' onclick="copyText('chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 2.3 — Tighten without losing meaning</span><span class='pill'>Prompt Card 2.3</span></div><textarea readonly id='chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-3'>Use when: You need the same message with fewer words.
+Prompt:
+Tighten the text below to 60% of its length while keeping meaning and all commitments. Preserve numbers/dates. Keep tone neutral. Text: [paste].</textarea><button class='btn' onclick="copyText('chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output-3')">Copy</button></div></section><section id='chapter-3-quality-control-accuracy-risk-tone-and-trust'><h2>Chapter 3 — Quality Control: Accuracy, Risk, Tone, and Trust</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 3.1 — Verify-before-send checklist</span><span class='pill'>Prompt Card 3.1</span></div><textarea readonly id='chapter-3-quality-control-accuracy-risk-tone-and-trust-1'>If your draft includes any of the items below, verify them or replace with placeholders.
+- Numbers: budgets, KPIs, headcount, dates, targets
+- Policy or legal claims
+- Commitments on behalf of others
+- Customer or vendor specifics
+- Performance-related statements about individuals</textarea><button class='btn' onclick="copyText('chapter-3-quality-control-accuracy-risk-tone-and-trust-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 3.2 — The Assumptions Table</span><span class='pill'>Prompt Card 3.2</span></div><textarea readonly id='chapter-3-quality-control-accuracy-risk-tone-and-trust-2'>When AI is wrong, it is usually because it assumed something you did not notice. Force assumptions into the open.</textarea><button class='btn' onclick="copyText('chapter-3-quality-control-accuracy-risk-tone-and-trust-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 3.3 — Executive sanity check</span><span class='pill'>Prompt Card 3.3</span></div><textarea readonly id='chapter-3-quality-control-accuracy-risk-tone-and-trust-3'>Use this when writing upward or cross-functionally.</textarea><button class='btn' onclick="copyText('chapter-3-quality-control-accuracy-risk-tone-and-trust-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 3.4 — The Tone Dial</span><span class='pill'>Prompt Card 3.4</span></div><textarea readonly id='chapter-3-quality-control-accuracy-risk-tone-and-trust-4'>Tone is strategy. Many managers default to either too polite (unclear) or too sharp (damaging). Use a tone dial.
+- Direct: short, decisive, minimal context (aligned teams + urgency)
+- Neutral: factual, calm, clear ask (best default for cross-functional)
+- Diplomatic: acknowledges constraints, offers options, preserves relationship (conflict/escalation)</textarea><button class='btn' onclick="copyText('chapter-3-quality-control-accuracy-risk-tone-and-trust-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 3.5 — Risk and pre-mortem (for plans and decisions)</span><span class='pill'>Prompt Card 3.5</span></div><textarea readonly id='chapter-3-quality-control-accuracy-risk-tone-and-trust-5'>For plans and decisions, run a pre-mortem: assume it failed in 90 days. Why? Then add mitigations.</textarea><button class='btn' onclick="copyText('chapter-3-quality-control-accuracy-risk-tone-and-trust-5')">Copy</button></div></section><section id='chapter-4-executive-emails-clear-firm-and-action-driving'><h2>Chapter 4 — Executive Emails: Clear, Firm, and Action-Driving</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 4.1 — Decision request email (options + deadline)</span><span class='pill'>Prompt Card 4.1</span></div><textarea readonly id='chapter-4-executive-emails-clear-firm-and-action-driving-1'>Use when: You need a decision from a stakeholder.
+Prompt:
+Draft a decision-request email. Requirements: clear subject, decision/ask in first 2 lines, provide 2-3 options with trade-offs, recommend one option, include a deadline and what happens if no response. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-4-executive-emails-clear-firm-and-action-driving-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 4.2 — No-with-options (firm, respectful)</span><span class='pill'>Prompt Card 4.2</span></div><textarea readonly id='chapter-4-executive-emails-clear-firm-and-action-driving-2'>Use when: You must decline a request without burning the relationship.
+Prompt:
+Write a concise &quot;no-with-options&quot; email. Include: what we cannot do, why (one sentence), what we can do instead (2 options), and the next step. Tone: calm, respectful, no blame. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-4-executive-emails-clear-firm-and-action-driving-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 4.3 — Calm escalation (facts + ask)</span><span class='pill'>Prompt Card 4.3</span></div><textarea readonly id='chapter-4-executive-emails-clear-firm-and-action-driving-3'>Use when: You need to escalate an issue without sounding emotional.
+Prompt:
+Write a calm escalation note. Structure: (1) Situation (facts only), (2) Impact, (3) What we already tried, (4) Specific ask/decision needed, (5) Deadline, (6) Proposed next steps. Remove blame language. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-4-executive-emails-clear-firm-and-action-driving-3')">Copy</button></div></section><section id='chapter-5-meetings-that-produce-decisions-not-just-discussion'><h2>Chapter 5 — Meetings That Produce Decisions (Not Just Discussion)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 5.1 — Decision-first agenda generator</span><span class='pill'>Prompt Card 5.1</span></div><textarea readonly id='chapter-5-meetings-that-produce-decisions-not-just-discussion-1'>Use when: You want a meeting that produces outcomes.
+Prompt:
+Create a decision-first agenda for a [30/60] minute meeting. Include: decisions to make (max 3), timeboxes, owner per section, pre-read required, and what will be decided vs discussed. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-5-meetings-that-produce-decisions-not-just-discussion-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 5.2 — One-page pre-read (that gets read)</span><span class='pill'>Prompt Card 5.2</span></div><textarea readonly id='chapter-5-meetings-that-produce-decisions-not-just-discussion-2'>Use when: You need a pre-read that supports a decision.
+Prompt:
+Draft a one-page pre-read for this meeting. Sections: Decision, Background (3 bullets), Options, Recommendation, Risks/assumptions, Questions for attendees. Keep under 250-300 words. Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-5-meetings-that-produce-decisions-not-just-discussion-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 5.3 — Decision log + follow-up email</span><span class='pill'>Prompt Card 5.3</span></div><textarea readonly id='chapter-5-meetings-that-produce-decisions-not-just-discussion-3'>Use when: You need clean follow-through after a meeting.
+Prompt:
+Turn these meeting notes into (1) decision log, (2) action list with owners and dates, then draft a short follow-up email that restates decisions and actions. Notes: [paste].</textarea><button class='btn' onclick="copyText('chapter-5-meetings-that-produce-decisions-not-just-discussion-3')">Copy</button></div></section><section id='chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels'><h2>Chapter 6 — One-Pagers, Updates &amp; Strategy Notes (Thinking That Travels)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 6.1 — One-pager from messy inputs</span><span class='pill'>Prompt Card 6.1</span></div><textarea readonly id='chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-1'>Use when: You need an alignment one-pager quickly.
+Prompt:
+Create a one-page alignment note from the inputs below. Structure: Goal, Current state, Key constraints, Options, Recommendation, Risks, Next steps (owners/dates). Keep it scannable (headings + bullets). Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 6.2 — Options memo (3 options)</span><span class='pill'>Prompt Card 6.2</span></div><textarea readonly id='chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-2'>Use when: You need to compare alternatives with trade-offs.
+Prompt:
+Write an options memo with 3 options (including a pilot if relevant). For each: summary, upside, downside, cost/time, risks, prerequisites. End with recommendation + what would change our mind. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 6.3 — Weekly exec update (R/Y/G)</span><span class='pill'>Prompt Card 6.3</span></div><textarea readonly id='chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-3'>Use when: You need a weekly status update that leadership can scan.
+Prompt:
+Draft a weekly exec update using R/Y/G status. Include: Overall status, Top 3 accomplishments, Top 3 risks/blockers (with mitigations), Decisions needed, Next 7 days plan. Keep it under 250 words. Inputs: [paste].
+- Before/after examples for structure, clarity, and length
+- Print-friendly templates + a readiness checklist</textarea><button class='btn' onclick="copyText('chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels-3')">Copy</button></div></section><section id='chapter-7-difficult-conversations-escalations-calm-clear-effective'><h2>Chapter 7 — Difficult Conversations &amp; Escalations (Calm, Clear, Effective)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 7.1 — Difficult conversation prep (outcome + boundary)</span><span class='pill'>Prompt Card 7.1</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-1'>Use when: You want to prepare for a difficult conversation.
+Prompt:
+Help me prepare for a difficult conversation. Output: desired outcome, non-negotiables/boundaries, evidence/examples (what to say), questions to ask, likely reactions, and a 5-minute conversation script. Situation: [paste].</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 7.2 — De-escalation rewrite (neutral facts)</span><span class='pill'>Prompt Card 7.2</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-2'>Use when: A message is too sharp or emotional.
+Prompt:
+Rewrite the text below to be neutral, factual, and forward-looking. Remove blame, sarcasm, and absolutes. Preserve the ask and deadline. Text: [paste].</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 7.3 — Post-conversation recap (HR-safe)</span><span class='pill'>Prompt Card 7.3</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-3'>Use when: You need documentation that is factual and defensible.
+Prompt:
+Draft a recap email for a performance/behavior conversation. Include: date, topic, observed behaviors (facts), agreed expectations, support offered, next checkpoint date, and how success will be measured. Tone: respectful and HR-safe. Notes: [paste].
+This chapter gives you a practical system for difficult conversations and escalations. You will learn how to set boundaries, reset expectations, escalate without blame, and recover after mistakes - using AI as a drafting partner while you keep responsibility for judgment and tone.</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 8.3 — SBI+E feedback draft</span><span class='pill'>Prompt Card 8.3</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-4'>Use when: You need specific feedback with expectations.
+Prompt:
+Draft feedback using SBI+E: Situation, Behavior, Impact, Expectation. Keep it factual, include 1-2 concrete examples, and propose a next step/check-in. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 8.4 — HR-safe rewrite (remove labels)</span><span class='pill'>Prompt Card 8.4</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-5'>Use when: You have a draft that sounds judgmental or risky.
+Prompt:
+Rewrite this feedback to be HR-safe: remove labels (e.g., lazy, toxic), remove absolutes (always/never), keep observable behaviors and impact, keep tone calm and respectful. Text: [paste].</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-5')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 8.5 — Performance narrative (evidence-based)</span><span class='pill'>Prompt Card 8.5</span></div><textarea readonly id='chapter-7-difficult-conversations-escalations-calm-clear-effective-6'>Use when: You need a review paragraph that is defensible.
+Prompt:
+Write a performance narrative paragraph based on evidence. Include: scope/results, strengths with examples, development areas with examples, and a clear rating justification. Avoid personal attributes; focus on outputs and behaviors. Evidence: [paste].
+- Have I removed sensitive personal/confidential details from any AI drafting?
+- Can I defend this message in front of a VP or HR if needed?</textarea><button class='btn' onclick="copyText('chapter-7-difficult-conversations-escalations-calm-clear-effective-6')">Copy</button></div></section><section id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe'><h2>Chapter 8 — Feedback &amp; Performance Reviews (Fair, Specific, HR-Safe)</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 8.1 — SBI done properly (with an added expectation step)</span><span class='pill'>Prompt Card 8.1</span></div><textarea readonly id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe-1'></textarea><button class='btn' onclick="copyText('chapter-8-feedback-performance-reviews-fair-specific-hr-safe-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 8.2 — HR-safe language patterns</span><span class='pill'>Prompt Card 8.2</span></div><textarea readonly id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe-2'>In people topics, wording matters. The safest and most effective style is evidence-based: behavior, dates, impact, expectation. Avoid labels and interpretations of intent.</textarea><button class='btn' onclick="copyText('chapter-8-feedback-performance-reviews-fair-specific-hr-safe-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.5 — Role clarity before sourcing (outcomes)</span><span class='pill'>Prompt Card 9.5</span></div><textarea readonly id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe-3'>Use when: You want a role profile that hires for results.
+Prompt:
+Create a role profile based on outcomes. Output: mission, top 5 outcomes for first 6 months, required competencies (with evidence signals), nice-to-haves, and anti-requirements (what we will not hire for). Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-8-feedback-performance-reviews-fair-specific-hr-safe-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.6 — Structured interview loop + questions</span><span class='pill'>Prompt Card 9.6</span></div><textarea readonly id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe-4'>Use when: You want consistent interviews that produce evidence.
+Prompt:
+Design a structured interview loop for this role. Include stages, competencies per stage, 3 questions per competency, and a scoring rubric (1-5) with anchors. Role profile: [paste].</textarea><button class='btn' onclick="copyText('chapter-8-feedback-performance-reviews-fair-specific-hr-safe-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.7 — Debrief summary (evidence over opinions)</span><span class='pill'>Prompt Card 9.7</span></div><textarea readonly id='chapter-8-feedback-performance-reviews-fair-specific-hr-safe-5'>Use when: You need to turn interview notes into a clean decision.
+Prompt:
+Summarize interview notes into a debrief: evidence by competency, strengths, risks, open questions, and hire/no-hire recommendation with rationale. Flag any statements that are opinions without evidence. Notes: [paste].</textarea><button class='btn' onclick="copyText('chapter-8-feedback-performance-reviews-fair-specific-hr-safe-5')">Copy</button></div></section><section id='chapter-9-opening-scene'><h2>Chapter 9 — Opening scene</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 9.1 — Role clarity before sourcing (outcomes, not wish lists)</span><span class='pill'>Prompt Card 9.1</span></div><textarea readonly id='chapter-9-opening-scene-1'>Most job descriptions start with a list of skills. Start with outcomes. When you define outcomes, you attract candidates who can deliver, not just those who match keywords.</textarea><button class='btn' onclick="copyText('chapter-9-opening-scene-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.2 — Competency-based interview design</span><span class='pill'>Prompt Card 9.2</span></div><textarea readonly id='chapter-9-opening-scene-2'>Competencies are the bridge between a role and an interview. They make interviews consistent and reduce bias by anchoring questions and scoring to job-relevant behaviors.</textarea><button class='btn' onclick="copyText('chapter-9-opening-scene-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.3 — Question banks that produce evidence (not stories)</span><span class='pill'>Prompt Card 9.3</span></div><textarea readonly id='chapter-9-opening-scene-3'>Good interview questions force candidates to show how they think and act. Bad questions produce rehearsed stories and vague claims.</textarea><button class='btn' onclick="copyText('chapter-9-opening-scene-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 9.4 — Scorecards (reduce gut feel)</span><span class='pill'>Prompt Card 9.4</span></div><textarea readonly id='chapter-9-opening-scene-4'>A scorecard makes interviews comparable. It reduces halo/horns effects and improves fairness. Score independently before the debrief discussion.</textarea><button class='btn' onclick="copyText('chapter-9-opening-scene-4')">Copy</button></div></section><section id='chapter-10-coaching-growth-plans-building-capability-not-dependence'><h2>Chapter 10 — Coaching &amp; Growth Plans — Building Capability, Not Dependence</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 10.1 — Fixer-to-coach switch</span><span class='pill'>Prompt Card 10.1</span></div><textarea readonly id='chapter-10-coaching-growth-plans-building-capability-not-dependence-1'>Use when: You keep solving problems for people instead of coaching.
+Prompt:
+Act as a coach. For the situation below, do not give solutions first. Ask 5 coaching questions that help the person think. Then suggest 2 small experiments and how to measure success. Situation: [paste].</textarea><button class='btn' onclick="copyText('chapter-10-coaching-growth-plans-building-capability-not-dependence-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 10.2 — Growth plan builder (90 days)</span><span class='pill'>Prompt Card 10.2</span></div><textarea readonly id='chapter-10-coaching-growth-plans-building-capability-not-dependence-2'>Use when: You need a measurable growth plan.
+Prompt:
+Create a 90-day growth plan. Include: skill/behavior focus, success signals, weekly practice, support/resources, milestones (30/60/90), and check-in questions. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-10-coaching-growth-plans-building-capability-not-dependence-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 10.3 — 1:1 agenda + recap</span><span class='pill'>Prompt Card 10.3</span></div><textarea readonly id='chapter-10-coaching-growth-plans-building-capability-not-dependence-3'>Use when: You want a repeatable 1:1 cadence.
+Prompt:
+Create a 1:1 agenda for [person] with sections: wins, blockers, priorities, development, support needed, decisions. Then draft a short recap template with actions (owner/date). Context: [paste].
+Over months and years, this message compounds.
+People begin to escalate earlier. Decisions migrate upward.
+What started as support becomes dependence.</textarea><button class='btn' onclick="copyText('chapter-10-coaching-growth-plans-building-capability-not-dependence-3')">Copy</button></div></section><section id='chapter-11-ai-for-decision-making-and-strategy'><h2>Chapter 11 — AI for Decision-Making and Strategy</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 12.1 — Process discovery interview guide</span><span class='pill'>Prompt Card 12.1</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-1'>Use when: You need to understand how work actually happens.
+Prompt:
+Create a 12-question process discovery interview guide for this process. Cover: trigger, steps, handoffs, queues, rework, exceptions, tools/artifacts, decision criteria, and metrics. Process: [describe].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.2 — As-is process map from messy notes</span><span class='pill'>Prompt Card 12.2</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-2'>Use when: You have scattered notes/tickets and need an as-is map.
+Prompt:
+From the inputs below, produce an as-is process map. Output: steps (1..N), roles per step, artifacts, waiting points/queues, rework loops, top exceptions, and where decisions happen. Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.3 — Bottleneck and waste hypotheses</span><span class='pill'>Prompt Card 12.3</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-3'>Use when: You want to find the one constraint that drives most pain.
+Prompt:
+Analyze this process data/notes and propose the top 3 bottlenecks and top 5 waste drivers (handoffs, queues, rework, exceptions, unclear decisions). For each: why it matters, evidence from the input, and a small experiment to test a fix in 1 week. Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.4 — SOP + checklist + Definition of Done</span><span class='pill'>Prompt Card 12.4</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-4'>Use when: You fixed something and want it to stick.
+Prompt:
+Draft a one-page SOP for this process. Include: purpose, scope, inputs, outputs, roles, steps, checklist (Definition of Done), exceptions/escalation, and 3-5 metrics. Process notes: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.5 — Exception playbook builder</span><span class='pill'>Prompt Card 12.5</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-5'>Use when: Exceptions are dominating your team time.
+Prompt:
+Build an exception playbook. For each exception type: definition, decision criteria, default action, owner, escalation path, and customer/quality risk. Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-5')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.6 — Weekly ops review pack</span><span class='pill'>Prompt Card 12.6</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-6'>Use when: You want an operating rhythm that produces decisions.
+Prompt:
+Create a weekly ops review pack: agenda (30 min), 3-5 core metrics, decision log template, action list template, and one process improvement experiment slot. Context: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-6')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.7 — Intake triage summary generator</span><span class='pill'>Prompt Card 12.7</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-7'>Use when: Requests arrive from everywhere and priorities drift.
+Prompt:
+Create an intake triage system. Output: categories, required fields, priority rules, SLA targets, and a triage email/Slack template. Inputs: [paste].</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-7')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 12.8 — Incident timeline and post-mortem builder</span><span class='pill'>Prompt Card 12.8</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-8'>Use when: You need fast learning from incidents without blame.
+Prompt:
+Turn these incident notes into: timeline, impact, contributing factors (evidence-based), root cause hypotheses, immediate fixes, long-term prevention, and owners/dates. Keep tone blameless and factual. Notes: [paste].
+Decide recommendation and rationale
+Explain with a one-page decision memo
+This structure prevents the most common failure mode under pressure: confusing motion with progress.</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-8')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.1 — Decision Brief Builder</span><span class='pill'>Prompt Card 11.1</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-9'>Use when: You have scattered context and a deadline.
+You are my decision analyst. Build a Decision Brief using only the information I provide.
+Output sections:
+1) Decision statement (one sentence)
+2) Deadline + decision owner
+3) Success criteria (max 5 bullets)
+4) Constraints (budget, timeline, compliance, security, people)
+5) Known facts (only what I explicitly gave)
+6) Unknowns (questions that matter)
+Here is my context (messy on purpose):
+[paste notes / email snippets]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-9')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.2 — Options Generator (with do-nothing and hybrids)</span><span class='pill'>Prompt Card 11.2</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-10'>Use when: Your team is stuck in false binaries.
+Generate 6 options for this decision.
+Must include: do nothing, pilot, and at least 2 hybrid options.
+For each option, give: summary, upside, downside, prerequisites, and when it&#x27;s the right choice.
+Decision context: [decision statement + constraints]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-10')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.3 — Assumptions &amp; Evidence Table</span><span class='pill'>Prompt Card 11.3</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-11'>Use when: AI (or humans) start inventing certainty.
+Create an Assumptions &amp; Evidence table for each option.
+Columns: Assumption, Why it matters, Current evidence (quote only from my input), Confidence (low/med/high), How to validate fast (1-2 actions).
+Options: [list options]
+Evidence I have: [paste what you actually know]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-11')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.4 — Pre-mortem + Early Warning Signs</span><span class='pill'>Prompt Card 11.4</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-12'>Use when: The decision is high-stakes.
+Run a pre-mortem: assume we chose [Option X] and it failed after 6 months.
+List the top 10 failure modes. For each: root cause, early warning sign, mitigation, and owner role type.
+Context: [constraints + stakeholders + timeline]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-12')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.5 — Stakeholder Reaction Simulator</span><span class='pill'>Prompt Card 11.5</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-13'>Use when: Alignment is fragile.
+Simulate stakeholder reactions to the recommendation below.
+Stakeholders: [CFO], [CTO], [Operations Lead], [Security], [Finance], [Regional Lead].
+For each: likely objection, what they care about, and the best response in 2-3 sentences.
+Recommendation: [your draft]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-13')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 11.6 — One-Page Decision Memo</span><span class='pill'>Prompt Card 11.6</span></div><textarea readonly id='chapter-11-ai-for-decision-making-and-strategy-14'>Use when: You must communicate upward fast.
+Write a one-page decision memo in an executive tone.
+Sections: Decision, Recommendation, Options considered, Rationale, Risks &amp; mitigations, What would change our mind, Next steps + owners.
+Do not invent numbers. Where info is missing, use TBD and list validation actions.
+Inputs: [paste Decision Brief + options + assumptions + pre-mortem highlights]</textarea><button class='btn' onclick="copyText('chapter-11-ai-for-decision-making-and-strategy-14')">Copy</button></div></section><section id='chapter-12-ai-in-operations-and-process-optimization'><h2>Chapter 12 — AI in Operations and Process Optimization</h2><p class='empty'>No copy/paste prompts in this chapter.</p></section><section id='chapter-13-ai-for-marketing-sales-and-customer-experience'><h2>Chapter 13 — AI for Marketing, Sales, and Customer Experience</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 13.1 — Voice-of-Customer Theme Extractor</span><span class='pill'>Prompt Card 13.1</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-1'>Use when: you have tickets, reviews, notes, and everyone argues about what they &quot;mean&quot;.
+You are my customer-insight analyst. Summarise the themes in the text below.
+Output:
+1) Top 8 themes (in customers’ words)
+2) Pain points vs desired outcomes
+3) Common confusions (what they misunderstand)
+4) Trust barriers (what makes them hesitate)
+5) Suggested messaging angles (must be truthful; no invented claims)
+Text corpus: [paste tickets/reviews/call notes]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.2 — Segment by Jobs-To-Be-Done</span><span class='pill'>Prompt Card 13.2</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-2'>Use when: your segmentation is too broad or based on demographics.
+Create 4–6 segments based on jobs-to-be-done using the customer language below.
+For each segment, provide: job, trigger, desired outcome, anxieties, objections, and the first success moment.
+Customer language: [paste themes or raw examples]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.3 — Messaging House Builder (truth + proof)</span><span class='pill'>Prompt Card 13.3</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-3'>Use when: marketing and sales say different things.
+Build a messaging house for [product/service].
+Sections:
+- Core promise (one sentence, strictly true)
+- 3 supporting pillars (each with: benefit, proof points, and boundaries/what we do NOT claim)
+- Top 5 objections and responses (sales-ready)
+Inputs: customer themes + product facts: [paste]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.4 — Campaign Brief Generator (cross-functional)</span><span class='pill'>Prompt Card 13.4</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-4'>Use when: you need alignment before producing assets.
+Create a campaign brief that aligns Marketing, Sales, and Support.
+Include: goal, target segment, offer, message, proof, constraints/compliance, funnel assets needed, success metrics per stage, and support readiness items.
+Context: [paste]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.5 — Ad Copy Variations with Guardrails</span><span class='pill'>Prompt Card 13.5</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-5'>Use when: you want variants, but brand and compliance matter.
+Generate 12 ad copy variations for [channel] for this campaign.
+Guardrails:
+- Keep tone: [brand voice description]
+- Do not mention: [forbidden claims/words]
+- Must include: [required elements e.g., pricing transparency / disclaimer]
+- No invented numbers or promises.
+Brief: [paste messaging house + offer]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-5')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.6 — Landing Page Clarity Critique (conversion + trust)</span><span class='pill'>Prompt Card 13.6</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-6'>Use when: clicks are high but conversion/activation is low.
+Act as a conversion and trust reviewer. Critique this landing page copy.
+Output:
+1) What is unclear or inconsistent
+2) What objections are unanswered
+3) What proof is missing
+4) Rewrite suggestion for headline, subhead, and 3 key sections
+Constraints: stay truthful, keep brand voice: [voice].
+Landing page text: [paste]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-6')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.7 — Sales Enablement One-Pager</span><span class='pill'>Prompt Card 13.7</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-7'>Use when: sales says the leads are wrong or they don’t know what to say.
+Create a sales enablement one-pager for this campaign.
+Include: who this is for, who it’s NOT for, 5 discovery questions, 5 key benefits, proof points, common objections with responses, and a 30-second pitch.
+Inputs: messaging house + ICP + boundaries: [paste]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-7')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.8 — Support Macro + FAQ Builder</span><span class='pill'>Prompt Card 13.8</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-8'>Use when: support volume spikes and questions repeat.
+Create support macros and FAQ entries based on these repeated issues.
+Requirements:
+- Empathetic, clear, short
+- Step-by-step resolution
+- When to escalate and to whom
+- Keep tone: [brand voice],
+- No promises outside policy.
+Repeated issues: [paste themes/examples]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-8')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 13.9 — Experiment Prioritiser (impact/effort/confidence)</span><span class='pill'>Prompt Card 13.9</span></div><textarea readonly id='chapter-13-ai-for-marketing-sales-and-customer-experience-9'>Use when: you have 20 ideas and no prioritisation.
+Prioritise these experiments using Impact, Effort, and Confidence.
+Output a table with: hypothesis, metric, expected impact, effort, confidence, risks, and a recommended order.
+Experiments: [list]</textarea><button class='btn' onclick="copyText('chapter-13-ai-for-marketing-sales-and-customer-experience-9')">Copy</button></div></section><section id='chapter-14-ethics-governance-and-risk-management-in-ai'><h2>Chapter 14 — Ethics, Governance, and Risk Management in AI</h2><div class='card'><div class='meta'><span class='title'>Prompt Card 14.1 — Sensitivity Scan (before you paste)</span><span class='pill'>Prompt Card 14.1</span></div><textarea readonly id='chapter-14-ethics-governance-and-risk-management-in-ai-1'>Prompt:
+You are my data safety checker. Before I use AI, help me assess whether my input contains sensitive data.
+Classify each item as: OK to share, Must anonymize, Never share.
+Then propose an anonymized version that keeps the meaning.
+
+Input text:
+[paste text]</textarea><button class='btn' onclick="copyText('chapter-14-ethics-governance-and-risk-management-in-ai-1')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 14.2 — Rewrite with neutral, defensible language (HR-safe)</span><span class='pill'>Prompt Card 14.2</span></div><textarea readonly id='chapter-14-ethics-governance-and-risk-management-in-ai-2'>Prompt:
+Rewrite the following text to be neutral, factual, and defensible.
+Rules:
+- Remove loaded adjectives and mind-reading.
+- Use observable behavior and evidence.
+- Avoid medical/mental health speculation.
+- Keep it respectful and professional.
+
+Text:
+[paste text]</textarea><button class='btn' onclick="copyText('chapter-14-ethics-governance-and-risk-management-in-ai-2')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 14.3 — Hallucination Guard: assumptions and verification plan</span><span class='pill'>Prompt Card 14.3</span></div><textarea readonly id='chapter-14-ethics-governance-and-risk-management-in-ai-3'>Prompt:
+Take this draft output and identify anything that might be inaccurate, unverifiable, or overly confident.
+Create a table with: Claim, Why it might be risky, What source would verify it, Priority (high/med/low).
+Then propose a safer rewrite that avoids unsupported claims.
+
+Draft output:
+[paste output]</textarea><button class='btn' onclick="copyText('chapter-14-ethics-governance-and-risk-management-in-ai-3')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 14.4 — Bias Check for hiring/performance rubrics</span><span class='pill'>Prompt Card 14.4</span></div><textarea readonly id='chapter-14-ethics-governance-and-risk-management-in-ai-4'>Prompt:
+Review this evaluation rubric for bias risks and unclear criteria.
+Return: (1) Potential bias points, (2) Concrete rewrites of criteria to be behavior-based, (3) A structured scorecard with evidence fields.
+
+Rubric:
+[paste rubric]</textarea><button class='btn' onclick="copyText('chapter-14-ethics-governance-and-risk-management-in-ai-4')">Copy</button></div><div class='card'><div class='meta'><span class='title'>Prompt Card 14.5 — Customer-facing message risk review</span><span class='pill'>Prompt Card 14.5</span></div><textarea readonly id='chapter-14-ethics-governance-and-risk-management-in-ai-5'>Prompt:
+You are a risk reviewer. Evaluate this customer-facing message for:
+- unclear commitments
+- legal risk language
+- tone risks
+- missing disclaimers or next steps
+Then rewrite it to be clear, calm, and specific.
+
+Message:
+[paste message]</textarea><button class='btn' onclick="copyText('chapter-14-ethics-governance-and-risk-management-in-ai-5')">Copy</button></div></section>
+  </main>
+  <aside class='toc' aria-label='Table of contents'>
+    <div class='toc-inner'>
+      <h2>Chapters</h2>
+      <ul>
+        <li><a href='#chapter-1-how-managers-should-use-ai-safely-effectively'>Chapter 1 — How Managers Should Use AI (Safely + Effectively)</a></li><li><a href='#chapter-2-the-executive-brief-the-60-second-input-that-fixes-most-output'>Chapter 2 — The Executive Brief (The 60-Second Input That Fixes Most Output)</a></li><li><a href='#chapter-3-quality-control-accuracy-risk-tone-and-trust'>Chapter 3 — Quality Control: Accuracy, Risk, Tone, and Trust</a></li><li><a href='#chapter-4-executive-emails-clear-firm-and-action-driving'>Chapter 4 — Executive Emails: Clear, Firm, and Action-Driving</a></li><li><a href='#chapter-5-meetings-that-produce-decisions-not-just-discussion'>Chapter 5 — Meetings That Produce Decisions (Not Just Discussion)</a></li><li><a href='#chapter-6-one-pagers-updates-strategy-notes-thinking-that-travels'>Chapter 6 — One-Pagers, Updates &amp; Strategy Notes (Thinking That Travels)</a></li><li><a href='#chapter-7-difficult-conversations-escalations-calm-clear-effective'>Chapter 7 — Difficult Conversations &amp; Escalations (Calm, Clear, Effective)</a></li><li><a href='#chapter-8-feedback-performance-reviews-fair-specific-hr-safe'>Chapter 8 — Feedback &amp; Performance Reviews (Fair, Specific, HR-Safe)</a></li><li><a href='#chapter-9-opening-scene'>Chapter 9 — Opening scene</a></li><li><a href='#chapter-10-coaching-growth-plans-building-capability-not-dependence'>Chapter 10 — Coaching &amp; Growth Plans — Building Capability, Not Dependence</a></li><li><a href='#chapter-11-ai-for-decision-making-and-strategy'>Chapter 11 — AI for Decision-Making and Strategy</a></li><li><a href='#chapter-12-ai-in-operations-and-process-optimization'>Chapter 12 — AI in Operations and Process Optimization</a></li><li><a href='#chapter-13-ai-for-marketing-sales-and-customer-experience'>Chapter 13 — AI for Marketing, Sales, and Customer Experience</a></li><li><a href='#chapter-14-ethics-governance-and-risk-management-in-ai'>Chapter 14 — Ethics, Governance, and Risk Management in AI</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<script>
+function copyText(id){const el=document.getElementById(id); el.select(); el.setSelectionRange(0, 999999); navigator.clipboard.writeText(el.value);}
+const q=document.getElementById('search');
+q.addEventListener('input', ()=>{
+  const term=q.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(card=>{
+    const txt=card.innerText.toLowerCase();
+    card.style.display = txt.includes(term)?'block':'none';
+  });
+});
+</script>
+</body></html>
